@@ -1,34 +1,19 @@
-# Predicting-price-based-on-Car-specifications
-Car price prediction using Multiple Linear Regression.
-
-# Year: 2018
-# Title: Multiple linear regression with evaluation and visualisation
-# Author: Harshavardhan Koneru 
-#
-# Data: http://archive.ics.uci.edu/ml/datasets/Automobile
-# Data consist of the following entities: 
-# (a) the specification of an auto in terms of various characteristics, 
-# (b) its assigned insurance risk rating, i.e.
-#     degree to which the auto is more risky than its price indicates
-# (c) its normalized losses in use as compared to other cars, i.e.
-#     the relative average loss payment per insured vehicle year.
 # We will be predicting price based on car specifications.
 
-##### Activate libraries
-
-# install.packages("Hmisc", dependencies = TRUE)
-# install.packages("psych", dependencies = TRUE)
-# install.packages("car", dependencies = TRUE)
-library(Hmisc)
-library(psych)
-library(car)
-
-##### Read and clean the data and select variables
 
 ### Define a working directory
 # Locate your project directory and use the forward / slash
 setwd("C:/Users/admin/Documents/Multiple Regression")
 getwd()
+
+##### Read and clean the data and select variables
+
+install.packages("Hmisc", dependencies = TRUE)
+install.packages("psych", dependencies = TRUE)
+install.packages("car", dependencies = TRUE)
+library(Hmisc)
+library(psych)
+library(car)
 
 # Read the Automobile.csv data set and eliminate missing values
 auto <- read.csv(file = "Data/automobile.csv", header=TRUE, na.strings="?")
@@ -377,3 +362,4 @@ scatter3d(10^price ~ peak.rpm * curb.weight, data=train.sample, groups=factor(pr
 
 # Save the last plot to a JPG file
 # rgl.snapshot(filename = "last-plot.jpg")
+
